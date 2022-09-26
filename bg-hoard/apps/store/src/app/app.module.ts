@@ -6,7 +6,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
-
+// import { StoreUtilFormattersModule } from '@bg-hoard/store/ui-formatters';
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [
