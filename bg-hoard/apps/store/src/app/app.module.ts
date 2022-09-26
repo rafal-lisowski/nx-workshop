@@ -6,14 +6,26 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
-// import { StoreUtilFormattersModule } from '@bg-hoard/store/ui-formatters';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+    RouterModule.forRoot(
+      [
+        {
+          path: 'game/:id',
+          loadChildren: () =>
+            import('@bg-hoard/store/feature-game-detail').then(
+              (m) => m.StoreFeatureGameDetailModule
+            ),
+        },
+      ],
+      { initialNavigation: 'enabledBlocking' }
+    ),
     MatCardModule,
-    StoreUiSharedModule
+    StoreUiSharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
