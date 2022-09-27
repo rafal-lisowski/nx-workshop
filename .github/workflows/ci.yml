@@ -8,5 +8,5 @@ jobs:
     name:  TestStore
     steps:
       - uses: actions/checkout@v1
-      - uses: bahmutov/npm-install@v1
+      - uses: bahmutov/npm-install@v1.4.5
       - run: npx nx affected:test
