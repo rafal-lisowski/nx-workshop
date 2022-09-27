@@ -13,26 +13,38 @@
       }
     },
     "directory": {
-        "type": "string",
-        "description": "Directory",
-        "x-prompt": {
-          "message": "Add directory name",
-          "type": "list",
-          "items": [
-            {
-              "value": "store",
-              "label": "Store"
-            },
-            {
-              "value": "api",
-              "label": "Api"
-            },
-            {
-              "value": "shared",
-              "label": "Shared"
-            }
-          ]
-        }
+      "type": "string",
+      "description": "Directory",
+      "x-prompt": {
+        "message": "Add directory name",
+        "type": "list",
+        "items": [
+          {
+            "value": "api",
+            "label": "api"
+          },
+          {
+            "value": "store",
+            "label": "store"
+          },
+          {
+            "value": "shared",
+            "label": "shared"
+          },
+          {
+            "value": "util-formatters",
+            "label": "util-formatters"
+          },
+          {
+            "value": "util-interface",
+            "label": "util-interface"
+          },
+          {
+            "value": "videos",
+            "label": "videos"
+          }
+        ]
+      }
     }
   },
   "required": ["name", "required"]
