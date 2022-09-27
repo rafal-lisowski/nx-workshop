@@ -11,12 +11,13 @@
           {
             "enforceBuildableLibDependency": true,
             "allow": [],
-            "depConstraints": [
-              {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
-              }
-            ]
+            "depConstraints": [{
+              "sourceTag": "scope:store",
+              "onlyDependOnLibsWithTags": ["scope:store", "scope:util-interface", "scope:shared", "scope:util-formatters"]
+            }, {
+              "sourceTag": "scope:api",
+              "onlyDependOnLibsWithTags": ["scope:api", "scope:shared", "scope:util-interface"]
+            }]
           }
         ]
       }
