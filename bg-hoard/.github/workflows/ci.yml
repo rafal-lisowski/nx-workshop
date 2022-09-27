@@ -5,7 +5,7 @@ on: [pull_request]
 jobs:
   test-store:
     runs-on: ubuntu-latest
-    name: Test Store
+    name:  TestStore
     steps:
       - uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
